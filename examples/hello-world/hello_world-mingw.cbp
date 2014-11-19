@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="hello_world MinGW" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="contik-mingw-gcc" />
+		<MakeCommands>
+			<Build command="$make -f $makefile TARGET=minimal-net HOST_OS=Windows" />
+			<CompileFile command="$make -f $makefile $file HOST_OS=Windows" />
+			<Clean command="$make -f $makefile TARGET=minimal-net HOST_OS=Windows clean" />
+			<DistClean command="$make -f $makefile distclean$target" />
+			<AskRebuildNeeded command="$make -q -f $makefile TARGET=minimal-net HOST_OS=Windows" />
+			<SilentBuild command="$make -f $makefile TARGET=minimal-net HOST_OS=Windows &gt; $(CMD_NULL)" />
+		</MakeCommands>
+		<Build>
+			<Target title="Makefile">
+				<Option output="hello_world-cygwin" prefix_auto="1" extension_auto="1" />
+				<Option type="1" />
+				<Option compiler="contik-mingw-gcc" />
+				<MakeCommands>
+					<Build command="$make -f $makefile TARGET=minimal-net HOST_OS=Windows" />
+					<CompileFile command="$make -f $makefile $file HOST_OS=Windows" />
+					<Clean command="$make -f $makefile TARGET=minimal-net HOST_OS=Windows clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile TARGET=minimal-net HOST_OS=Windows" />
+					<SilentBuild command="$make -f $makefile TARGET=minimal-net HOST_OS=Windows &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="../../LICENSE" />
+		<Unit filename="../../Makefile.include" />
+		<Unit filename="../../README-EXAMPLES.md" />
+		<Unit filename="../../platform/ev-aducrf101mkxz/README.md" />
+		<Unit filename="../../platform/minimal-net/Makefile.minimal-net" />
+		<Unit filename="../../platform/minimal-net/contiki-conf.h" />
+		<Unit filename="../../platform/minimal-net/contiki-main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../platform/native/Makefile.native" />
+		<Unit filename="../../platform/native/contiki-conf.h" />
+		<Unit filename="../../platform/native/contiki-main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Makefile" />
+		<Unit filename="README.md" />
+		<Unit filename="hello-world.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
