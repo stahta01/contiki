@@ -11,9 +11,6 @@
 				<Option output="hello_world-cygwin" prefix_auto="1" extension_auto="1" />
 				<Option type="1" />
 				<Option compiler="contik-cygwin-gcc" />
-				<Compiler>
-					<Add option="-g" />
-				</Compiler>
 				<MakeCommands>
 					<Build command="$make -f $makefile TARGET=minimal-net HOST_OS=Windows" />
 					<CompileFile command="$make -f $makefile $file HOST_OS=Windows" />
@@ -24,9 +21,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Compiler>
-			<Add option="-Wall" />
-		</Compiler>
 		<Unit filename="../../LICENSE" />
 		<Unit filename="../../Makefile.include" />
 		<Unit filename="../../README-EXAMPLES.md" />
