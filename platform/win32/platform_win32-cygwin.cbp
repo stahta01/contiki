@@ -7,12 +7,12 @@
 		<Option pch_mode="2" />
 		<Option compiler="contik-cygwin-gcc" />
 		<MakeCommands>
-			<Build command="$make -f $makefile TARGET=minimal-net HOST_OS=Windows" />
-			<CompileFile command="$make -f $makefile $file HOST_OS=Windows" />
-			<Clean command="$make -f $makefile TARGET=minimal-net HOST_OS=Windows clean" />
+			<Build command="$make -f $makefile $(make_target) $(make_os)" />
+			<CompileFile command="$make -f $makefile $(make_target) $(make_os) $file" />
+			<Clean command="$make -f $makefile $(make_target) $(make_os) clean" />
 			<DistClean command="$make -f $makefile distclean$target" />
-			<AskRebuildNeeded command="$make -q -f $makefile TARGET=minimal-net HOST_OS=Windows" />
-			<SilentBuild command="$make -f $makefile TARGET=minimal-net HOST_OS=Windows &gt; $(CMD_NULL)" />
+			<AskRebuildNeeded command="$make -q -f $makefile $(make_target) $(make_os)" />
+			<SilentBuild command="$make -f $makefile $(make_target) $(make_os) &gt; $(CMD_NULL)" />
 		</MakeCommands>
 		<Build>
 			<Target title="Makefile">
@@ -20,14 +20,18 @@
 				<Option type="1" />
 				<Option compiler="contik-cygwin-gcc" />
 				<MakeCommands>
-					<Build command="$make -f $makefile TARGET=win32 HOST_OS=Windows" />
-					<CompileFile command="$make -f $makefile $file HOST_OS=Windows" />
-					<Clean command="$make -f $makefile TARGET=win32 HOST_OS=Windows clean" />
+					<Build command="$make -f $makefile $(make_target) $(make_os)" />
+					<CompileFile command="$make -f $makefile $(make_target) $(make_os) $file" />
+					<Clean command="$make -f $makefile $(make_target) $(make_os) clean" />
 					<DistClean command="$make -f $makefile distclean$target" />
-					<AskRebuildNeeded command="$make -q -f $makefile TARGET=win32 HOST_OS=Windows" />
-					<SilentBuild command="$make -f $makefile TARGET=win32 HOST_OS=Windows &gt; $(CMD_NULL)" />
+					<AskRebuildNeeded command="$make -q -f $makefile $(make_target) $(make_os)" />
+					<SilentBuild command="$make -f $makefile $(make_target) $(make_os) &gt; $(CMD_NULL)" />
 				</MakeCommands>
 			</Target>
+			<Environment>
+				<Variable name="make_os" value="HOST_OS=Windows" />
+				<Variable name="make_target" value="TARGET=win32" />
+			</Environment>
 		</Build>
 		<Unit filename="../../LICENSE" />
 		<Unit filename="../../Makefile.include" />
