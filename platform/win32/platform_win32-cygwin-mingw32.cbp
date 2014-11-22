@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="platform_win32 cygwin mingw32" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="contik-cygwin-gcc-mingw32" />
+		<MakeCommands>
+			<Build command="$make -f $makefile $(make_target) $(make_os) V=1" />
+			<CompileFile command="$make -f $makefile $(make_target) $(make_os) $file" />
+			<Clean command="$make -f $makefile $(make_target) $(make_os) clean" />
+			<DistClean command="$make -f $makefile distclean$target" />
+			<AskRebuildNeeded command="$make -q -f $makefile $(make_target) $(make_os)" />
+			<SilentBuild command="$make -f $makefile $(make_target) $(make_os) V=1 &gt; $(CMD_NULL)" />
+		</MakeCommands>
+		<Build>
+			<Target title="Makefile">
+				<Option output="hello_world-cygwin" prefix_auto="1" extension_auto="1" />
+				<Option type="1" />
+				<Option compiler="contik-cygwin-gcc-mingw32" />
+				<MakeCommands>
+					<Build command="$make -f $makefile $(make_target) $(make_os) V=1" />
+					<CompileFile command="$make -f $makefile $(make_target) $(make_os) $file" />
+					<Clean command="$make -f $makefile $(make_target) $(make_os) clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $(make_target) $(make_os)" />
+					<SilentBuild command="$make -f $makefile $(make_target) $(make_os) V=1 &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Environment>
+				<Variable name="make_os" value="HOST_OS=Windows" />
+				<Variable name="make_target" value="TARGET=win32" />
+			</Environment>
+		</Build>
+		<Unit filename="../../LICENSE" />
+		<Unit filename="../../Makefile.include" />
+		<Unit filename="../../README-EXAMPLES.md" />
+		<Unit filename="Makefile" />
+		<Unit filename="Makefile.customrules-win32" />
+		<Unit filename="Makefile.win32" />
+		<Unit filename="README-1.X.md" />
+		<Unit filename="README-VC.md" />
+		<Unit filename="clock.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="conio.h" />
+		<Unit filename="contiki-conf.h" />
+		<Unit filename="contiki-main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
