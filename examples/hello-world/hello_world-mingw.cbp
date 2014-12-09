@@ -32,6 +32,11 @@
 		<Unit filename="../../LICENSE" />
 		<Unit filename="../../Makefile.include" />
 		<Unit filename="../../README-EXAMPLES.md" />
+		<Unit filename="../../core/contiki-default-conf.h" />
+		<Unit filename="../../core/contiki-lib.h" />
+		<Unit filename="../../core/contiki-net.h" />
+		<Unit filename="../../core/contiki-version.h" />
+		<Unit filename="../../core/contiki.h" />
 		<Unit filename="../../platform/ev-aducrf101mkxz/README.md" />
 		<Unit filename="../../platform/minimal-net/Makefile.minimal-net" />
 		<Unit filename="../../platform/minimal-net/contiki-conf.h" />
